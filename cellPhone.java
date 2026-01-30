@@ -29,7 +29,7 @@ public class cellPhone
 
     public String toString()
     {
-        String message = "Manufacturer: " + manufact + "\nModel: " + model + "\nRetail Price: " + retailPrice;
+        String message = "### CELL PHONE DETAILS ### \nManufacturer: " + manufact + "\nModel #: " + model + "\nRetail Price: $" + retailPrice;
         return message;
     }
 }

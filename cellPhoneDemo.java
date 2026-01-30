@@ -11,13 +11,13 @@ public class cellPhoneDemo {
         System.out.print("Cell Phone Class \nEnter Manufacturer: ");
         manuf = scan.nextLine();
 
-        System.out.print("\nEnter Model: ");
+        System.out.print("Enter Model #: ");
         mod = scan.nextInt();
 
-        System.out.print("\nEnter Retail Price: ");
+        System.out.print("Enter Retail Price: ");
         price = scan.nextDouble();
 
         cellPhone phone = new cellPhone(manuf, mod, price);
-        System.out.println(phone.toString());
+        System.out.print("\n" + phone.toString());
     }
 }
