@@ -15,6 +15,10 @@ public class StudentTest {
         {
             System.out.println(st.getRollNo() + " " + st.getName() + " " + st.getAge());
         }
+        
+        // Line Break
+        System.out.println("\n-----------------------------\n");
+        
         //sort by name
         System.out.println("\nSorting by name...");
         Collections.sort(students, new NameCompare());
@@ -24,6 +28,9 @@ public class StudentTest {
             System.out.println(st.getRollNo() + " " + st.getName() + " " + st.getAge());
         }
 
+        // Line Break
+        System.out.println("\n-----------------------------\n");
+        
         //sort by age
         System.out.println("\nSorting by age...");
         Collections.sort(students, new Comparator<Student>() {
