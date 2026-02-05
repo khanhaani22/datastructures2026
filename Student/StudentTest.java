@@ -4,9 +4,9 @@ import Student;
 public class StudentTest {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<Student>();
-        students.add(new Student(1, "Alice", 16));
+        students.add(new Student(3, "Alice", 16));
         students.add(new Student(2, "Bob", 18));
-        students.add(new Student(3, "Charlie", 17));
+        students.add(new Student(5, "Charlie", 17));
         //sort by roll no
         System.out.println("Sorting by roll number...");
         Collections.sort(students);
@@ -21,7 +21,8 @@ public class StudentTest {
         
         //sort by name
         System.out.println("\nSorting by name...");
-        Collections.sort(students, new NameCompare());
+        NameCompare nameCompare = new NameCompare();
+        Collections.sort(students, nameCompare);
 
         for(Student st: students)
         {
@@ -33,12 +34,8 @@ public class StudentTest {
         
         //sort by age
         System.out.println("\nSorting by age...");
-        Collections.sort(students, new Comparator<Student>() {
-            public int compare(Student s1, Student s2) {
-                return s1.getAge() - s2.getAge();
-    }
-        });
-
+        AgeCompare ageCompare = new AgeCompare();
+        Collections.sort(students, ageCompare);
         for(Student st: students)
         {
             System.out.println(st.getRollNo() + " " + st.getName() + " " + st.getAge());
